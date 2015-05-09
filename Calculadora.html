@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.js" ></script>
+</head>
+<body>
+	<input id="num1" type="text" placeholder="Digite un Numero"/>
+	<input id="num2" type="text" placeholder="Digite un Numero"/>
+	<button id="suma" >+</button>
+	<button id="resta">-</button>
+	<button id="multiplicar">x</button>
+	<button id="dividir">/</button>
+	<h1>Resultado</h1>
+	<input id="Resultado" type="text" />
+
+	<script>
+
+		var Sum = document.getElementById('suma');
+		var Restar = document.getElementById('resta');
+		var Multi = document.getElementById('multiplicar');
+		var Dividir = document.getElementById('dividir');
+
+		Sum.onclick = function(){
+			var a = document.getElementById('num1').value;
+			var b = document.getElementById('num2').value;
+			var R = Number(a) + Number(b);
+			document.getElementById('Resultado').value = R;
+		}
+		Restar.onclick = function(){
+			var a = document.getElementById('num1').value;
+			var b = document.getElementById('num2').value;
+			var R = Number(a) - Number(b);
+			document.getElementById('Resultado').value = R;
+		}
+		Multi.onclick = function(){
+			var a = document.getElementById('num1').value;
+			var b = document.getElementById('num2').value;
+			var R = Number(a) * Number(b);
+			document.getElementById('Resultado').value = R;
+		}
+		Dividir.onclick = function(){
+			var a = document.getElementById('num1').value;
+			var b = document.getElementById('num2').value;
+			var R = Number(a) / Number(b);
+			document.getElementById('Resultado').value = R;
+		}
+	</script>
+</body>
+</html>
